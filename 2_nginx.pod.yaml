@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: my-nginx
+  labels:
+    app: nginx
+    rel: stable
+spec:
+  containers:
+  - name: my-nginx
+    image: nginx:alpine
+    ports: 
+    - containerPort: 80
+
+
+# kubectl create -f nginx.pod.yaml --save-config // can also use apply instead
+# kubectl get pod my-nginx -o yaml // save config stores yaml which will be outputed in annotations.
+# kubectl describe pod my-nginx // nice for troubleshooting, what is the pod, ip address, image, events.
+# kubectl exec my-nginx -it -- sh
