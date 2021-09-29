@@ -15,7 +15,7 @@ Kubernetess has one or more master nodes that knows how to manage rest of the no
 One VM can run multiple pods. 
 
 Master has 4 main parts
-- Store etcs
+- Store etcd
 - Controller Manager
 - Scheduler
 - API Server
